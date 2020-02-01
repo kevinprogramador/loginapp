@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../servicios/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registe-page',
@@ -6,10 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registe-page.component.scss']
 })
 export class RegistePageComponent implements OnInit {
-
-  constructor() { }
+ public email: string;
+ public password: string;
+  constructor(
+    public authService: AuthService,
+    public router: Router
+  ) { }
 
   ngOnInit() {
   }
-
+ onSubmitRegisterAddUser() {
+  this.authService.registeruser(this.email, this.password)
+  .then( (res) => {
+    console.log('bien!');
+    console.log(res);
+  }).catch( (err) => {
+    console.log(err);
+  });
+}
 }
