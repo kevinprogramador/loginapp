@@ -20,8 +20,7 @@ export class RegistePageComponent implements OnInit {
  onSubmitRegisterAddUser() {
   this.authService.registeruser(this.email, this.password)
   .then( (res) => {
-    console.log('bien!');
-    console.log(res);
+  this.router.navigate(['/privado']);
   }).catch( (err) => {
     console.log(err);
   });
