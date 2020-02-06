@@ -8,6 +8,7 @@ import { NotFoundPageComponent } from './componentes/not-found-page/not-found-pa
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 
 const routes: Routes = [
+  { path : '', redirectTo : '/login', pathMatch : 'full'},
   {path: '', component: HomePageComponent},
   {path: 'login', component: LoginPageComponent},
   {path: 'register', component: RegistePageComponent},
