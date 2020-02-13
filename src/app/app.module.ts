@@ -15,6 +15,7 @@ import { AngularFireModule} from 'angularfire2';
 import { AuthService } from './servicios/auth.service';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
+import { MapsComponent } from './componentes/maps/maps.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { environment } from '../environments/environment';
     RegistePageComponent,
     LoginPageComponent,
     PrivadoPageComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    MapsComponent
   ],
   imports: [
     BrowserModule,

@@ -30,7 +30,7 @@ export class LoginPageComponent implements OnInit {
  onClickGoogleLogin() {
    this.authService.loginGoogle()
    .then((res) => {
-     this.router.navigate(['/login/privado']);
+     this.router.navigate(['/maps']);
    }).catch( err => console.log(err.message));
  }
  onClickFacebookLogin() {
